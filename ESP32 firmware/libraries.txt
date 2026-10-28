@@ -1,0 +1,2 @@
+WiFi.h and HTTPClient.h are included with the ESP32 Arduino core.
+LiquidCrystal I2C

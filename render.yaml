@@ -1,0 +1,13 @@
+services:
+  - type: web
+    name: building-energy-api
+    runtime: python
+    buildCommand: pip install -r backend/requirements.txt && python -m backend.train
+    startCommand: uvicorn backend.main:app --host 0.0.0.0 --port $PORT
+    envVars:
+      - key: PYTHON_VERSION
+        value: 3.11.9
+      - key: THRESHOLD_PERCENTILE
+        value: 95
+      - key: CORS_ORIGINS
+        sync: false

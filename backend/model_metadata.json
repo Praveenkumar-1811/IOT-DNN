@@ -1,0 +1,19 @@
+{
+  "training_samples": 51840,
+  "validation_samples": 17280,
+  "test_samples": 17280,
+  "split_method": "chronological 60/20/20 train/calibration/test",
+  "ground_truth_column": null,
+  "excluded_labeled_anomalies_from_training_and_calibration": 0,
+  "chronological_train_end_row": 51840,
+  "chronological_calibration_end_row": 69120,
+  "normal_only_training": true,
+  "last_trained_at": "2026-09-30T10:47:53.802606+00:00",
+  "threshold_percentile": 95.0,
+  "threshold": 8.84245544272557e-06,
+  "raw_threshold": 6.557047527167015e-06,
+  "validation_error_mean": 2.1773546450276626e-06,
+  "validation_error_max": 0.000943356950301677,
+  "training_data": "C:\\Users\\prave\\Desktop\\IOT DNN\\backend\\data\\demo_energy_data.csv",
+  "data_classification": "generated demo-normal dataset"
+}

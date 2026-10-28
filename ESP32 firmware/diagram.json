@@ -1,0 +1,112 @@
+
+{
+  "version": 1,
+  "author": "EnergyGuard AI",
+  "editor": "wokwi",
+  "parts": [
+    {
+      "type": "board-esp32-devkit-c-v4",
+      "id": "esp",
+      "top": 0,
+      "left": 0,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-potentiometer",
+      "id": "pot1",
+      "top": -80,
+      "left": 300,
+      "attrs": {
+        "value": "1000"
+      }
+    },
+    {
+      "type": "wokwi-lcd1602",
+      "id": "lcd1",
+      "top": 180,
+      "left": 280,
+      "attrs": {
+        "pins": "i2c"
+      }
+    },
+    {
+      "type": "wokwi-led",
+      "id": "ledGreen",
+      "top": 30,
+      "left": 400,
+      "attrs": {
+        "color": "green"
+      }
+    },
+    {
+      "type": "wokwi-resistor",
+      "id": "rGreen",
+      "top": 70,
+      "left": 450,
+      "attrs": {
+        "value": "220"
+      }
+    },
+    {
+      "type": "wokwi-led",
+      "id": "ledRed",
+      "top": 120,
+      "left": 400,
+      "attrs": {
+        "color": "red"
+      }
+    },
+    {
+      "type": "wokwi-resistor",
+      "id": "rRed",
+      "top": 160,
+      "left": 450,
+      "attrs": {
+        "value": "220"
+      }
+    },
+    {
+      "type": "wokwi-buzzer",
+      "id": "buzzer1",
+      "top": 250,
+      "left": 430,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-pushbutton",
+      "id": "btn1",
+      "top": 320,
+      "left": 400,
+      "attrs": {
+        "color": "blue",
+        "xray": "1",
+        "bounce": "0"
+      }
+    }
+  ],
+  "connections": [
+    ["esp:3V3", "pot1:VCC", "red", []],
+    ["esp:GND.1", "pot1:GND", "black", []],
+    ["esp:34", "pot1:SIG", "green", []],
+
+    ["esp:21", "lcd1:SDA", "green", []],
+    ["esp:22", "lcd1:SCL", "blue", []],
+    ["esp:5V", "lcd1:VCC", "red", []],
+    ["esp:GND.1", "lcd1:GND", "black", []],
+
+    ["esp:18", "ledGreen:A", "green", []],
+    ["ledGreen:C", "rGreen:1", "green", []],
+    ["rGreen:2", "esp:GND.1", "black", []],
+
+    ["esp:19", "ledRed:A", "red", []],
+    ["ledRed:C", "rRed:1", "red", []],
+    ["rRed:2", "esp:GND.1", "black", []],
+
+    ["esp:23", "buzzer1:2", "orange", []],
+    ["esp:GND.1", "buzzer1:1", "black", []],
+
+    ["esp:27", "btn1:1.l", "blue", []],
+    ["esp:GND.1", "btn1:2.l", "black", []]
+  ],
+  "dependencies": {}
+}

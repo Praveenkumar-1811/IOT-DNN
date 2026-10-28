@@ -1,0 +1,29 @@
+{
+  "configurations": [
+    {
+      "name": "ESP32 PlatformIO",
+      "includePath": [
+        "${workspaceFolder}/ESP32 firmware/src",
+        "${workspaceFolder}/ESP32 firmware/.pio/libdeps/esp32dev/**",
+        "${env:USERPROFILE}/.platformio/packages/framework-arduinoespressif32/cores/esp32",
+        "${env:USERPROFILE}/.platformio/packages/framework-arduinoespressif32/variants/esp32",
+        "${env:USERPROFILE}/.platformio/packages/framework-arduinoespressif32/libraries/WiFi/src",
+        "${env:USERPROFILE}/.platformio/packages/framework-arduinoespressif32/libraries/HTTPClient/src",
+        "${env:USERPROFILE}/.platformio/packages/framework-arduinoespressif32/libraries/Wire/src",
+        "${env:USERPROFILE}/.platformio/packages/framework-arduinoespressif32/libraries/Network/src",
+        "${env:USERPROFILE}/.platformio/packages/framework-arduinoespressif32/libraries/**",
+        "${env:USERPROFILE}/.platformio/packages/framework-arduinoespressif32-esp32-libs/qio_qspi/include",
+        "${env:USERPROFILE}/.platformio/packages/framework-arduinoespressif32-esp32-libs/include/**"
+      ],
+      "defines": [
+        "ARDUINO_ARCH_ESP32",
+        "ARDUINO_ESP32_DEV"
+      ],
+      "compilerPath": "${env:USERPROFILE}/.platformio/packages/toolchain-xtensa-esp-elf/bin/xtensa-esp32-elf-g++.exe",
+      "cStandard": "c17",
+      "cppStandard": "c++17",
+      "intelliSenseMode": "windows-gcc-x64"
+    }
+  ],
+  "version": 4
+}
